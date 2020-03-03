@@ -267,9 +267,9 @@
     <style name="HeaderTextStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">?primaryText</item>
-        <item name="android:letterSpacing">0.05</item>
-        <item name="android:fontFamily">@font/metropolis_bold</item>
-        <item name="fontFamily">@font/metropolis_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/metropolis_semibold</item>
+        <item name="fontFamily">@font/metropolis_semibold</item>
     </style>
 
     <style name="Header16TextStyle" parent="TextAppearance.MaterialComponents.Body1">
@@ -389,6 +389,12 @@
     <style name="SearchClipboardTitleStyle" parent="SearchClipboardStyle">
         <item name="android:textColor">?primaryText</item>
         <item name="android:textSize">@dimen/search_fragment_clipboard_title_text_size</item>
+    </style>
+
+    <style name="MetropolisButton">
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/metropolis_semibold</item>
+        <item name="fontFamily">@font/metropolis_semibold</item>
     </style>
 
     <style name="SearchClipboardUrlStyle" parent="SearchClipboardStyle">

@@ -38,6 +38,5 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="@color/foundation_light_theme"
-        android:letterSpacing=".05"
-        android:fontFamily="@font/metropolis_semibold" />
+        style="@style/MetropolisButton" />
 </LinearLayout>

@@ -52,12 +52,10 @@
                 android:textAllCaps="false"
                 android:textColor="@color/above_dark_theme"
                 android:textSize="16sp"
-                android:letterSpacing="0.05"
-                android:fontFamily="@font/metropolis_bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cfr_message"
-                app:fontFamily="@font/metropolis_bold" />
+                style="@style/MetropolisButton"/>
 
         <Button
                 android:id="@+id/cfr_neg_button"
@@ -68,11 +66,9 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white_color"
                 android:textSize="16sp"
-                android:letterSpacing="0.05"
-                android:fontFamily="@font/metropolis_bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cfr_pos_button"
-                app:fontFamily="@font/metropolis_bold" />
+                style="@style/MetropolisButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
