@@ -156,7 +156,9 @@
         android:textColor="?primaryText"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/theme_automatic_radio_button"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:letterSpacing=".05"
+        android:fontFamily="@font/metropolis_regular" />
 
     <TextView
         android:id="@+id/automatic_theme_summary"

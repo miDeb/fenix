@@ -37,5 +37,7 @@
         android:textColor="@color/button_text_color"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:backgroundTint="@color/foundation_light_theme" />
+        app:backgroundTint="@color/foundation_light_theme"
+        android:letterSpacing=".05"
+        android:fontFamily="@font/metropolis_semibold" />
 </LinearLayout>
