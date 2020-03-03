@@ -267,7 +267,7 @@
     <style name="HeaderTextStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">?primaryText</item>
-        <item name="android:letterSpacing">0.03</item>
+        <item name="android:letterSpacing">0.05</item>
         <item name="android:fontFamily">@font/metropolis_bold</item>
         <item name="fontFamily">@font/metropolis_bold</item>
     </style>
@@ -277,6 +277,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/metropolis_semibold</item>
         <item name="fontFamily">@font/metropolis_semibold</item>
+        <item name="android:letterSpacing">0.05</item>
     </style>
 
     <style name="Header14TextStyle" parent="TextAppearance.MaterialComponents.Body2">
@@ -284,12 +285,16 @@
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">@font/metropolis_semibold</item>
         <item name="fontFamily">@font/metropolis_semibold</item>
+        <item name="android:letterSpacing">0.05</item>
     </style>
 
     <style name="Header12TextStyle" parent="TextAppearance.MaterialComponents.Body2">
         <item name="android:textColor">?secondaryText</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/metropolis_semibold</item>
+        <item name="fontFamily">@font/metropolis_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="Body14TextStyle" parent="TextAppearance.MaterialComponents.Body2">

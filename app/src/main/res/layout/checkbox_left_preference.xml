@@ -36,7 +36,9 @@
         app:layout_constraintStart_toEndOf="@android:id/widget_frame"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Delete browsing data category" />
+        tools:text="Delete browsing data category"
+        android:fontFamily="@font/metropolis_bold"
+        android:letterSpacing="0.05" />
 
     <TextView
         android:id="@android:id/summary"
