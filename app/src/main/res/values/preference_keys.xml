@@ -123,6 +123,15 @@
     <string name="pref_key_auto_battery_theme" translatable="false">pref_key_auto_battery_theme</string>
     <string name="pref_key_follow_device_theme" translatable="false">pref_key_follow_device_theme</string>
 
+    <!-- Tab Tray Customization Settings -->
+    <string name="pref_key_tab_tray_same_direction" translatable="false">pref_key_tab_tray_same_direction</string>
+    <string name="pref_key_tab_tray_opposite_direction" translatable="false">pref_key_tab_tray_opposite_direction</string>
+    <string name="pref_key_tab_tray_always_top" translatable="false">pref_key_tab_tray_always_top</string>
+    <string name="pref_key_tab_tray_always_bottom" translatable="false">pref_key_tab_tray_always_bottom</string>
+    <string name="pref_key_tab_tray_new_tab_fab" translatable="false">pref_key_tab_tray_new_tab_fab</string>
+    <string name="pref_key_tab_tray_new_tab_bar" translatable="false">pref_key_tab_tray_new_tab_bar</string>
+
+
     <!-- Customization Settings -->
     <string name="pref_home_category" translatable="false">pref_home_category</string>
 

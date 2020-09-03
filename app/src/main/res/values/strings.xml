@@ -278,6 +278,10 @@
     <string name="preferences_sign_in">Sign in</string>
     <!-- Preference for changing where the toolbar is positioned -->
     <string name="preferences_toolbar">Toolbar</string>
+    <!-- Preference for changing from which direction the tabs tray opens -->
+    <string name="preferences_tab_tray_direction">Tabs Tray open direction</string>
+    <!-- Preference for changing how to display the new tab button -->
+    <string name="preferences_tab_tray_new_tab_type">New Tab Button Type</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Theme</string>
     <!-- Preference for customizing the home screen -->
@@ -444,6 +448,20 @@
     <string name="preference_top_toolbar">Top</string>
     <!-- Preference for using bottom toolbar -->
     <string name="preference_bottom_toolbar">Bottom</string>
+
+    <!-- Tabs Tray Preferences -->
+    <!-- Preference for opening the tabs tray from the same direction as the toolbar -->
+    <string name="preference_tab_tray_same_direction">From the same direction as the toolbar</string>
+    <!-- Preference for opening the tabs tray from the opposite direction as the toolbar -->
+    <string name="preference_tab_tray_opposite_direction">From the opposite direction as the toolbar</string>
+    <!-- Preference for opening the tabs tray from top -->
+    <string name="preference_tab_tray_always_top">Always from top</string>
+    <!-- Preference for opening the tabs tray from bottom -->
+    <string name="preference_tab_tray_always_bottom">Always from bottom</string>
+    <!-- Preference for using the fab new tab button -->
+    <string name="preference_tab_tray_new_tab_fab">FAB (Floating Action Button)</string>
+    <!-- Preference for opening the tabs tray from bottom -->
+    <string name="preference_tab_tray_new_tab_bar">Add a button to the bar</string>
 
     <!-- Theme Preferences -->
     <!-- Preference for using light theme -->

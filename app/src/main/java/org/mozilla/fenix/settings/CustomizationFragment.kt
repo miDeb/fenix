@@ -59,6 +59,8 @@ class CustomizationFragment : PreferenceFragmentCompat() {
         setupToolbarCategory()
         setupHomeCategory()
         setupAddonsCustomizationCategory()
+        setupTabTrayDirectionCategory()
+        setupTabTrayNewTabType()
     }
 
     private fun setupRadioGroups() {
@@ -163,6 +165,42 @@ class CustomizationFragment : PreferenceFragmentCompat() {
             text = context.settings().customAddonsCollection
             onPreferenceChangeListener = SharedPreferenceUpdater()
         }
+    }
 
+    private fun setupTabTrayDirectionCategory() {
+        val alwaysTop = requirePreference<RadioButtonPreference>(R.string.pref_key_tab_tray_always_top).apply {
+            onPreferenceChangeListener = SharedPreferenceUpdater()
+        }
+        val alwaysBottom = requirePreference<RadioButtonPreference>(R.string.pref_key_tab_tray_always_bottom).apply {
+            onPreferenceChangeListener = SharedPreferenceUpdater()
+        }
+        val sameDirection = requirePreference<RadioButtonPreference>(R.string.pref_key_tab_tray_same_direction).apply {
+            onPreferenceChangeListener = SharedPreferenceUpdater()
+        }
+        val oppositeDirection = requirePreference<RadioButtonPreference>(R.string.pref_key_tab_tray_opposite_direction).apply {
+            onPreferenceChangeListener = SharedPreferenceUpdater()
+        }
+
+        val settings = requireContext().settings()
+        alwaysTop.setCheckedWithoutClickListener(settings.tabTrayAlwaysTop)
+        alwaysBottom.setCheckedWithoutClickListener(settings.tabTrayAlwaysBottom)
+        sameDirection.setCheckedWithoutClickListener(settings.tabTraySameDirection)
+        oppositeDirection.setCheckedWithoutClickListener(settings.tabTrayOppositeDirection)
+
+        addToRadioGroup(sameDirection, oppositeDirection, alwaysTop, alwaysBottom)
+    }
+
+    private fun setupTabTrayNewTabType() {
+        val fab = requirePreference<RadioButtonPreference>(R.string.pref_key_tab_tray_new_tab_fab).apply {
+            onPreferenceChangeListener = SharedPreferenceUpdater()
+        }
+        val bar = requirePreference<RadioButtonPreference>(R.string.pref_key_tab_tray_new_tab_bar).apply {
+            onPreferenceChangeListener = SharedPreferenceUpdater()
+        }
+
+        val settings = requireContext().settings()
+        fab.setCheckedWithoutClickListener(settings.useNewTabFab)
+        bar.setCheckedWithoutClickListener(settings.useNewTabBar)
+        addToRadioGroup(fab, bar)
     }
 }

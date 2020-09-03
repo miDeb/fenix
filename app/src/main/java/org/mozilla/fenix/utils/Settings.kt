@@ -15,7 +15,6 @@ import android.view.accessibility.AccessibilityManager
 import androidx.annotation.VisibleForTesting
 import androidx.annotation.VisibleForTesting.PRIVATE
 import androidx.lifecycle.LifecycleOwner
-import androidx.preference.EditTextPreference
 import mozilla.components.feature.sitepermissions.SitePermissionsRules
 import mozilla.components.feature.sitepermissions.SitePermissionsRules.Action
 import mozilla.components.feature.sitepermissions.SitePermissionsRules.AutoplayAction
@@ -540,8 +539,49 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = !touchExplorationIsEnabled && !switchServiceIsEnabled
     )
 
+    var tabTraySameDirection by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_tab_tray_same_direction),
+        default = false
+    )
+
+    var tabTrayOppositeDirection by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_tab_tray_opposite_direction),
+        default = true
+    )
+
+    var tabTrayAlwaysTop by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_tab_tray_always_top),
+        default = false
+    )
+
+    var tabTrayAlwaysBottom by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_tab_tray_always_bottom),
+        default = false
+    )
+
     val toolbarPosition: ToolbarPosition
         get() = if (shouldUseBottomToolbar) ToolbarPosition.BOTTOM else ToolbarPosition.TOP
+
+    val shouldUseTopTabTray: Boolean
+    get() = if (tabTraySameDirection) {
+        !shouldUseBottomToolbar
+    } else {
+        if (tabTrayOppositeDirection) {
+            shouldUseBottomToolbar
+        } else {
+            tabTrayAlwaysTop
+        }
+    }
+
+    val useNewTabFab: Boolean by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_tab_tray_new_tab_fab),
+        default = false
+    )
+
+    val useNewTabBar: Boolean by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_tab_tray_new_tab_bar),
+        default = true
+    )
 
     var shouldStripUrl by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_strip_url),
